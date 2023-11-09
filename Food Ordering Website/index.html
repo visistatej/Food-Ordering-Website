@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <a href="#" class="logo"><i class="fas fa-utensils"></i> RT Kitchen</a>
+
+        <nav class="navbar">
+             <a class="active" href="#home">home</a>
+             <a href="#menu">   menu</a>
+             <a href="#about">about</a>
+        </nav>
+
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <i class="fas fa-search" id="search-icon"></i>
+            <!-- <a href="wishlist.html" class="fas fa-heart"></a> -->
+            <a href="cart.html" class="fas fa-shopping-cart"></a>
+        </div>
+
+</header>
+
+<!-- Pop-up Notification -->
+<div class="popup" id="popup">
+    <p>Item added to cart!</p>
+</div>
+
+
+<form action ="" id="search-form">
+     <input type="search"  placeholder="search" name="" id="search-box">
+     <label for="search-box" class="fas fa-search"></label>
+     <i class="fas fa-times" id="close"></i>
+ </form>
+     
+
+
+<section class="home" id="home">
+
+    <div class="home-slider">
+
+        <div class="wrapper">
+
+            <div class="slide">
+                <div class="content">
+                    <span>our special dish</span>
+                    <h3>Dosa</h3>
+                    <p>Dosa, our special dish at the food court, is a mouthwatering culinary delight that combines the flavors of traditional South Indian dosa
+                    with a unique twist!</p>
+                    <a class="btn" onclick="addToCart('Dosa', 60.00)">Add to Cart</a>
+                </div>
+                <div class="image">
+                    <img src="images/Dosa.png" alt="">
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class ="content">
+                    <span>our special dish</span>
+                    <h3>Podi Idly</h3>
+                    <p>Podi Idly is a delightful dish that combines the soft, fluffy goodness of
+                         traditional idly with the bold, flavorful punch of our secret spice blend known as 'Podi.' At RT Kitchen, 
+                         we have taken this beloved dish to a whole new level, crafting a culinary masterpiece that tantalizes your taste buds with every bite.</p>
+                         <a class="btn" onclick="addToCart('Podi Idly', 50.00)">Add to Cart</a>
+                </div> 
+                <div class="image">
+                    <img src="images/Podi_Idly.png" alt="">
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="content">
+                    <span>our special dish</span>
+                    <h3>Puri</h3>
+                    <p>At RT Kitchen, our Puri are expertly fried to perfection, ensuring they puff up beautifully.
+                        Each bite offers a satisfying crunch followed by the airy, melt-in-your-mouth texture inside.</p>
+                        <a class="btn" onclick="addToCart('Puri', 50.00)">Add to Cart</a>
+                </div>
+                <div class="image">
+                    <img src="images/Puri.png" alt="">
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+<!-- menu -->
+<section class="menu" id="menu">
+
+    <h3 class="sub-heading">our menu</h3>
+    <h3 class="heading">Breakfast</h3>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="images/Dosa.png" alt="">
+            <h3>Dosa</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₹60.00</span>
+            
+            <a class="btn" onclick="addToCart('Dosa', 60.00)">Add to Cart</a>
+        </div>
+
+        <div class="box">
+            <img src="images/Podi_Idly.png" alt="">
+            <h3>Podi Idly</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₹50.00</span>
+            <a class="btn" onclick="addToCart('Podi Idly', 50.00)">Add to Cart</a>
+
+        </div>
+
+        <div class="box">
+            <img src="images/Idly_Sambhar.png" alt="">
+            <h3>Idly Sambhar</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₹45.00</span>
+            <a class="btn" onclick="addToCart('Idly Sambhar', 45.00)">Add to Cart</a>
+
+        </div>
+
+        <div class="box">
+            <img src="images/Vada.png" alt="">
+            <h3>Vada</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₹50.00</span> 
+            <a class="btn" onclick="addToCart('Vada', 50.00)">Add to Cart</a>
+         </div>
+
+         <div class="box">
+            <img src="images/upma.png" alt="">
+            <h3>Upma</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₹65.00</span> 
+            <a class="btn" onclick="addToCart('Upma', 65.00)">Add to Cart</a>
+         </div>
+
+         <div class="box">
+            <img src="images/Puri.png" alt="">
+            <h3>Puri</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₹50.00</span> 
+            <a class="btn" onclick="addToCart('Puri', 50.00)">Add to Cart</a>
+         </div>
+
+         <div class="box">
+            <img src="images/poha.png" alt="">
+            <h3>Poha</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₹40.00</span> 
+            <a class="btn" onclick="addToCart('Poha', 40.00)">Add to Cart</a>
+         </div>
+    </div>
+</div>
+<br />
+<br />
+
+<h3 class="heading">Lunch</h3>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="images/Veg_Thali.png" alt="">
+            <h3>Veg Thali</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₹110.00</span>
+            <a class="btn" onclick="addToCart('Veg Thali', 110.00)">Add to Cart</a>
+        </div>
+
+        <div class="box">
+            <img src="images/Biryani.png" alt="">
+            <h3>Biryani</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₹180.00</span>
+            <a class="btn" onclick="addToCart('Biryani', 180.00)">Add to Cart</a>
+        </div>
+
+        <div class="box">
+            <img src="images/Fried_rice.png" alt="">
+            <h3>Fried Rice</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₹70.00</span>
+            <a class="btn" onclick="addToCart('fried rice', 70.00)">Add to Cart</a>
+        </div>
+
+        <div class="box">
+            <img src="images/Mushroom.png" alt="">
+            <h3>Mushroom Rice</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₹90.00</span> 
+            <a class="btn" onclick="addToCart('mushroom rice', 90.00)">Add to Cart</a>
+         </div>
+
+         <div class="box">
+            <img src="images/Curd_rice.png" alt="">
+            <h3>Curd Rice</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₹60.00</span> 
+            <a class="btn" onclick="addToCart('Curd rice', 60.00)">Add to Cart</a>
+         </div>    
+    </div>
+</div>
+</section>
+
+<!-- menu section ends  -->
+
+
+<section class="about" id="about">
+    <h3 class="sub-heading">about us</h3>
+    <h1 class="heading">why choose us?</h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img src="images/logo.PNG" alt="">
+        </div>
+
+        <div class="content">
+            <h3>Welcome to RT Kitchen</h3>
+            <p>
+                At RT Kitchen, we are dedicated to serving you the finest quality tiffins
+                that not only satisfy your hunger but also leave a lasting impression. We are more than just a restaurant; 
+                we are your home away from home, ensuring you receive delicious, wholesome meals every time.
+            </p>
+            <p>
+                Quality is at the heart of everything we do. 
+                From the freshest ingredients to the skillful hands of our chefs, 
+                we take pride in delivering tiffins that are a cut above the rest. 
+                Each dish is prepared with love and meticulous attention to detail, 
+                ensuring a delightful dining experience.
+            </p>
+            <div class="icons-container">
+                <div class="icons">
+                    <i class="fas fa-shipping-fast"></i>
+                    <span>Delivery 9AM - 6PM</span>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+<!-- footer -->
+
+<section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>Locations</h3>
+            <a href="#">Hyderabad</a>
+            <a href="#">Banglore</a>
+            <a href="#">Chennai</a>
+            <a href="#">Vijayawada</a>
+            <a href="#">Pulivendula</a>
+        </div>
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#about">About us</a>
+        </div>
+        <div class="box">
+            <h3>Contact info</h3>
+            <a href="#"><i class="fas fa-phone"></i>  +91 6304504204</a>
+            <a href="#"><i class="fas fa-phone"></i>  +91 9989566280</a>
+            <a href="#" type="gmail"><i class="fas fa-envelope"></i> visistatejareddy1234@gmail.com</a>
+            <a href="https://www.google.com/maps/place/Pulivendula,+Andhra+Pradesh/@14.4230743,78.20633,14z/data=!3m1!4b1!4m6!3m5!1s0x3
+            bb3ebb7c5835cd9:0x3a4854affffebccd!8m2!3d14.4222318!4d78.2263388!16s%2Fm%2F026mc1j?entry=ttu"><i class="fas fa-location"></i>  Pulivendula, india - 516390</a>
+        </div>
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="https://www.facebook.com/"><i class="fa fa-facebook-official"></i>facebook</a>
+            <a href="https://www.instagram.com/">instagram</a>
+            <a href="https://www.youtube.com/">youtube</a>
+            <a href="https://in.linkedin.com/">linkedin</a>
+        </div>
+    </div>
+    <div class="credit">copyright @ 2023 by<span> visista teja reddy</span> </div>
+</section>
+
+<div class="loader-container">
+    <img src="" alt="">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
